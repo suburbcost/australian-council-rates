@@ -1,0 +1,23 @@
+Australian council-level household running cost dataset 2026-27
+Version 2026-27+5afccafe
+
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt this material, including commercially, provided you
+give appropriate credit. Attribution, copy this line:
+
+  SuburbCost (2026). Australian council-level household running cost dataset, 2026-27. Version 2026-27+5afccafe. https://doi.org/10.5281/zenodo.22951042 https://www.suburbcost.com.au/dataset/ Licensed CC BY 4.0.
+
+Canonical page  https://www.suburbcost.com.au/dataset/
+Data file       https://www.suburbcost.com.au/dataset/suburbcost-council-running-costs.csv
+Rates file      https://www.suburbcost.com.au/dataset/suburbcost-council-rates.csv
+Dictionary      https://www.suburbcost.com.au/dataset/data-dictionary.md
+
+Read the data dictionary before computing across states. In the data file the
+council rate column holds four different statistics, and in the rates file it
+holds three, one per state. Averaging across them produces a number that means
+nothing.
+
+This is a council-level aggregate. Suburb-level data is not published.
+SuburbCost publishes no property prices, land valuations or capital growth.
