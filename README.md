@@ -1,3 +1,25 @@
+# GitHub repository README
+
+Repository name: `australian-council-rates`
+Description: Residential council rates for 227 Australian councils across QLD, NSW and VIC, on three named bases. CC BY 4.0.
+Topics: `australia` `open-data` `local-government` `council-rates` `cost-of-living` `csv` `dataset`
+
+Files to place at the repository root, copied from `dataset/` in this repo:
+
+    suburbcost-council-running-costs.csv
+    suburbcost-council-rates.csv
+    data-dictionary.md
+    LICENSE          <- rename LICENCE.txt to LICENSE so GitHub detects it
+    README.md        <- the content below
+
+Renaming the licence file matters. GitHub only shows the licence badge when the
+file is named `LICENSE`, and that badge is what makes the repo look reusable to
+someone scanning a list of results.
+
+---
+
+## README.md, paste below this line
+
 # Australian council rates and household running costs
 
 Residential council rates for **227 local government areas** across Queensland,
@@ -93,4 +115,6 @@ Canonical page: https://www.suburbcost.com.au/dataset/
 ## Disclosure
 
 Published by SuburbCost, which runs a consumer site built on the same model.
+The limits above are the ones that matter for reuse.
+
 The limits above are the ones that matter for reuse.
