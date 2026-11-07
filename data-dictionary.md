@@ -1,7 +1,7 @@
 # Data dictionary
 
 **Dataset** Australian council-level household running cost dataset 2026-27
-**Version** 2026-27+5afccafe
+**Version** 2026-27+8fc219d8
 **Rows** 148, one per council
 **Licence** CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
 **Canonical page** https://www.suburbcost.com.au/dataset/
@@ -19,7 +19,7 @@ across them.
 
 Attribution, copy this line:
 
-> SuburbCost (2026). Australian council-level household running cost dataset, 2026-27. Version 2026-27+5afccafe. https://doi.org/10.5281/zenodo.22951042 https://www.suburbcost.com.au/dataset/ Licensed CC BY 4.0.
+> SuburbCost (2026). Australian council-level household running cost dataset, 2026-27. Version 2026-27+8fc219d8. https://doi.org/10.5281/zenodo.22951042 https://www.suburbcost.com.au/dataset/ Licensed CC BY 4.0.
 
 ## What one row is
 
@@ -46,7 +46,7 @@ appear nowhere in this file.
 | `median_total_house_aud_incl_est` | integer | Median of council + water + modelled commute + building insurance across the council's suburbs. Contains an estimated component, see Estimated fields. | AUD per year |
 | `mean_total_house_aud_incl_est` | integer | Mean of the same. Published alongside the median because the two diverge sharply where a council mixes tapered and flat commute suburbs. | AUD per year |
 | `median_total_unit_aud_incl_est` | integer | Median of councilUnit + water + strata + modelled commute + contents insurance. A different set of components from the house total, not a like-for-like comparison. | AUD per year |
-| `median_water_aud` | integer | Median water and sewerage. Assumes roughly 190 kL a year. | AUD per year |
+| `median_water_aud` | integer | Median water and sewerage. Assumes 200 kL a year. | AUD per year |
 | `median_modelled_commute_drive_aud` | integer | Median modelled driving commute. Read commute_basis before using it, see Commute. | AUD per year |
 | `median_insurance_house_aud_est` | integer | Median building insurance. Estimated for every row. | AUD per year |
 | `median_strata_aud_est` | integer | Median body corporate, units only, 0 for houses. Estimated for every row. | AUD per year |
@@ -61,7 +61,7 @@ appear nowhere in this file.
 Every dollar figure is a whole number of Australian dollars, rounded **half
 up**. This matters when reproducing the medians. 70 of the 148 councils hold an
 even number of suburbs, so their median is the mean of two integers and can land
-on a half dollar. 61 of the 888 median cells in this file do.
+on a half dollar. 60 of the 888 median cells in this file do.
 
 Python's `round()` and R's `round()` both use half-to-**even**, so
 recomputing these medians in either language returns a figure one dollar lower
@@ -99,8 +99,8 @@ up with the taper.
 
 | `commute_basis` | Councils | Meaning |
 | --- | --- | --- |
-| `tapered` | 54 | No suburb uses the flat allowance. |
-| `mixed` | 42 | Some do. The median may sit either side of the boundary. |
+| `tapered` | 53 | No suburb uses the flat allowance. |
+| `mixed` | 43 | Some do. The median may sit either side of the boundary. |
 | `flat_allowance_only` | 52 | Every suburb uses it. The figure is **not a commute** for these councils. |
 
 **Distance is straight-line, so the tapered figures understate real driving.**
@@ -168,7 +168,7 @@ in the council: Cassowary Coast, Mareeba, Southern Downs, Tablelands and Western
 
 ## Known limits, stated rather than buried
 
-- **Nothing is excluded.** Only 50 of 148 rows carry no flag at all. A file
+- **Nothing is excluded.** Only 49 of 148 rows carry no flag at all. A file
   restricted to clean rows would be a third of this one and would hide which
   councils were dropped, so every row is published and every gap is a column.
 - **Medians are computed over all of a council's suburbs**, including flagged
